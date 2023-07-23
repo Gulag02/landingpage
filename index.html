@@ -10,6 +10,7 @@
     <meta name="Keywords" content="desenvolvimento,sites,web">
     <title>Landing Page</title>
     <link rel="stylesheet" href="css/Style.css">
+    <script src="./JavaScript/main.js" defer></script>
 </head>
 
 <body>
@@ -24,7 +25,8 @@
                 <li><a href="#Sobre">Sobre</a></li>
                 <li><a href="#produtos">Produtos</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="#">Entrar</a></li>
+                <li><a href="#cadastrar">Cadastrar</a></li>
+                <li><a href="#entrar">Entrar</a></li>
             </ul>
         </nav>
     </header>
@@ -38,127 +40,99 @@
     </div><!-- fim do banner -->
 
 
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+
+            <img src="./img/MACAO-transformed.png" style="width:100%">
+            <div class="text">Propaganda 1</div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="./img/promo2.png" style="width:100%">
+            <div class="text">Propaganda 2</div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="./img/promo3.png" style="width:100%">
+            <div class="text">Propaganda 3</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+
     <!-- Imagens do produto de inicio -->
     <!-- abrindo div pricipal:produto -->
-    <div class="row" id="produtos">
-        <!-- subdivisão da principal -->
-        <div class="column">
-            <label for="img1">Ração Natural1</label>
-            <img src="img/carneComBatata" alt="produto demonstrativo"
-                style="width: 100%;">
-            <p> COMIDA NATURAL PARA CÃES - CARNE COM BATATA DOCE - FILHOTES </p>
-
-        </div>
-
-        <div class="column">
-            <label for="img1">Ração Natural2</label>
-            <img src="img/suinoCombeterraba.jpg" alt="produto demonstrativo"
-                style="width: 100%;">
-            <p>COMIDA NATURAL PARA CÃES - SUÍ­NO COM BETERRABA</p>
-
-        </div>
-
-
-        <div class="column">
-            <label for="img1">Ração Natural3</label>
-            <img src="img/carneComAveia.jpg" alt="produto demonstrativo"
-                style="width: 100%;">
-            <p>COMIDA NATURAL PARA CÃES - SABOR CARNE COM AVEIA</p>
-
-        </div>
-
-        <div class="column">
-            <label for="img1">Ração Natural4</label>
-            <img src="img/suinoComMangericao.jpg" alt="produto demonstrativo"
-                style="width: 100%;">
-            <p>Comida Natural para Cães - SUÍNO COM MANJERICÃO (SEM GRÃOS)
-                <br>
-                18 porções - 1,440 Kg
-                <br>
-                R$ 77,00
-                (ou 3 x R$ 25,67)
-            </p>
-
-        </div>
-    </div>
-    <!-- fechando div principal -->
-
-    <!-- imagens de produtos de inicio segunda div principal -->
     <div class="row">
         <div class="column">
-            <label for="img1">Ração Natural5</label>
-            <img src="img/produto.jpg" alt="produto demonstrativo" style="width: 100%;">
-            <p>descrição do produto</p>
-
+            <div class="card">
+                <img src="img/suinoCombeterraba.jpg" alt="Jane" style="width:100%">
+                <div class="container">
+                    <h2>Suíno com beterraba</h2>
+                    <p class="title">Comida Natural Para Cães</p>
+                    <a href="detalhes.html" id="detalhes1">
+                        <p><button class="button">Ver detalhes</button></p>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="column">
-            <label for="img1">Ração Natural6</label>
-            <img src="img/produto.jpg" alt="produto demonstrativo" style="width: 100%;">
-            <p>descrição do produto</p>
-
-        </div>
-
-
-        <div class="column">
-            <label for="img1">Ração Natural7</label>
-            <img src="img/produto.jpg" alt="produto demonstrativo" style="width: 100%;">
-            <p>descrição do produto</p>
-
+            <div class="card">
+                <img src="img/carneComBatata" alt="Mike" style="width:100%">
+                <div class="container">
+                    <h2>Carne com batata</h2>
+                    <p class="title">Comida Natural Para Cães</p>
+                    <a href="detalhes.html" id="delhes2">
+                        <p><button class="button">Ver detalhes</button></p>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="column">
-            <label for="img1">Ração Natural8</label>
-            <img src="img/produto.jpg" alt="produto demonstrativo" style="width: 100%;">
-            <p>descrição do produto</p>
-
+            <div class="card">
+                <!-- trocar imagem -->
+                <img src="img/carneComBatata" alt="John" style="width:100%">
+                <div class="container">
+                    <h2>Carne com batata</h2>
+                    <p class="title">Comida Natural Para Cães</p>
+                    <a href="detalhes.html" id="delhes3">
+                        <p><button class="button">Ver detalhes</button></p>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- fechando a div row -->
-    <section id="Sobre">
-        <h3>Sobre nossa empresa</h3>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rerum doloremque, dolor repellat provident
-            alias sequi voluptates sed praesentium ut suscipit quibusdam ullam neque veritatis exercitationem iste sit
-            ducimus harum.
-        </p>
 
-
-    </section>
-    <section id="Sobre">
-        <h3>Sobre nossa empresa</h3>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rerum doloremque, dolor repellat provident
-            alias sequi voluptates sed praesentium ut suscipit quibusdam ullam neque veritatis exercitationem iste sit
-            ducimus harum.
-        </p>
-
-
-    </section>
-    <section id="Sobre">
-        <h3>Sobre nossa empresa</h3>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rerum doloremque, dolor repellat provident
-            alias sequi voluptates sed praesentium ut suscipit quibusdam ullam neque veritatis exercitationem iste sit
-            ducimus harum.
-        </p>
-
-
-    </section>
-
-    <!-- Criando cards Flip  -->
 
     <div class="row"> <!-- iniciando class row -->
         <!-- imagem 1 -->
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="img/carneComAveia.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRQG_CN5vZZVbxACJX3nhgwo3wOX3V8GSpTY5VBlIsSPrK23yMu9n27CiOoEzSiBa6w025Nik9HZ0rbvRA36ApbTMnsIwQKzbfd9BP4PUOmbATwk8s02M4U&usqp=CAE"
+                        alt="Avatar" style="width:195px;height:195px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
+                    <img src="img/suinoComMangericao.jpg" alt="" style="width:195px;height:195px;">
                 </div>
             </div>
         </div>
@@ -167,10 +141,11 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="img/carneComBatata" alt="Avatar" style="width:300px;height:300px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRQG_CN5vZZVbxACJX3nhgwo3wOX3V8GSpTY5VBlIsSPrK23yMu9n27CiOoEzSiBa6w025Nik9HZ0rbvRA36ApbTMnsIwQKzbfd9BP4PUOmbATwk8s02M4U&usqp=CAE"
+                        alt="Avatar" style="width:195px;height:195px;">
                 </div>
                 <div class="flip-card-back">
-                    <img src="img/ração natural.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    <img src="img/suinoComMangericao.jpg" alt="Avatar" style="width:195px;height:195px;">
                 </div>
             </div>
         </div>
@@ -178,62 +153,54 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="img/suinoComMangericao.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRQG_CN5vZZVbxACJX3nhgwo3wOX3V8GSpTY5VBlIsSPrK23yMu9n27CiOoEzSiBa6w025Nik9HZ0rbvRA36ApbTMnsIwQKzbfd9BP4PUOmbATwk8s02M4U&usqp=CAE"
+                        alt="Avatar" style="width:195px;height:195px;">
                 </div>
+
                 <div class="flip-card-back">
-                    <img src="img/suinoComMangericao.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    <img src="img/suinoComMangericao.jpg" alt="Avatar" style="width:195px;height:195px;">
                 </div>
             </div>
-        </div> 
+        </div>
         <!-- imagem 4 -->
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRQG_CN5vZZVbxACJX3nhgwo3wOX3V8GSpTY5VBlIsSPrK23yMu9n27CiOoEzSiBa6w025Nik9HZ0rbvRA36ApbTMnsIwQKzbfd9BP4PUOmbATwk8s02M4U&usqp=CAE" alt="Avatar" style="width:300px;height:300px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRQG_CN5vZZVbxACJX3nhgwo3wOX3V8GSpTY5VBlIsSPrK23yMu9n27CiOoEzSiBa6w025Nik9HZ0rbvRA36ApbTMnsIwQKzbfd9BP4PUOmbATwk8s02M4U&usqp=CAE"
+                        alt="Avatar" style="width:195px;height:195px;">
                 </div>
                 <div class="flip-card-back">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
+                    <img src="img/suinoComMangericao.jpg" alt="Avatar" style="width:195px;height:195px;">
                 </div>
+
             </div>
         </div>
+    </div>
     </div> <!-- fim da class row -->
 
 
 
     <!-- fim dos Cards Flip -->
-
-    <div style="background-color: black;">
+    <hr>
+    <div">
         <footer class="count_rodape">
-
-            <ul class="icones-sociais">
-                <li><a href="#" target="_blank" ><img src="img/icons8-facebook-30.png" alt=""></a></li>
-                <li><a href="#" target="_blank" ><img src="img/icons8-instagram-30.png" alt=""></a></li>
-                <li><a href="#" target="_blank" ><img src="img/icons8-whatsapp-30.png" alt=""></a></li>
-            </ul>
-
-            <p>
-                &copy; Todos os direitos reservados - Gustavo <a href="mailto:gustavosantosmudo@gmail.com">Gustavo</a>
-            </p>
-
+            <div class="rede-sociais">
+                <a class="face-icon" href="#" target="_blank"><img src="img/icons8-facebook-30.png" alt=""></a>
+                <a class="insta-icon" href="#" target="_blank"><img src="img/icons8-instagram-30.png" alt=""></a>
+                <a class="whats-icon" href="#" target="_blank"><img src="img/icons8-whatsapp-30.png" alt=""></a>
+            </div>
+            <div>
+                <p>&#169 Todos os direitos - Gustavo <a href="mailto:gustavosantosmudo@gmail.com">Gustavo</p>
+            </div>
 
         </footer>
-
-
-
-
-    </div>
-
-
-
-    <!-- fechando segunda div principal -->
-
-    <footer class="cont_rodape">
-        <div>
-            <p>&#169 Todos os direitos </p>
         </div>
-    </footer>
+
+
+
+        <!-- fechando segunda div principal -->
+
+
 
 </body>
 
